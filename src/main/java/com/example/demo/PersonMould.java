@@ -1,18 +1,19 @@
 package com.example.demo;
 
-public class  Member {
+public class PersonMould {
 
-    private int memberId;
+    private String memberId;
     private String firstName;
-
-
-    public Member() {
-    }
-
     private String lastName;
     private int age;
 
-    public Member(String firstName, String lastName, int age) {
+
+    public PersonMould() {
+    }
+
+
+
+    public PersonMould(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -20,7 +21,7 @@ public class  Member {
 
 
 
-    public Member(int memberId, String firstName, String lastName, int age) {
+    public PersonMould(String memberId, String firstName, String lastName, int age) {
         this.memberId = memberId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,17 +29,17 @@ public class  Member {
     }
 
 
-    public void addMember(String firstName, String lastName, int age){
+   /* public void addMember(String firstName, String lastName, int age){
 
-        Member member = new Member(firstName, lastName, age);
+        PersonMould personMould = new PersonMould(firstName, lastName, age);
 
-    }
+    }*/
 
-    public int getMemberId() {
+    public String getMemberId() {
         return memberId;
     }
 
-    public void setMemberId(int memberId) {
+    public void setMemberId(String memberId) {
         this.memberId = memberId;
     }
 
@@ -71,7 +72,7 @@ public class  Member {
 
     @Override
     public String toString() {
-        String info = String.format("memberId = %d, firstName = %s, lastName = %s, age = %d", memberId, firstName, lastName
+        String info = String.format("memberId = %s, firstName = %s, lastName = %s, age = %d", memberId, firstName, lastName
                 , age);
         return info;
     }
